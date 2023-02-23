@@ -1,0 +1,258 @@
+https://github.com/SaiKeerthanaM
+
+
+WHILE:-
+1)*WRITE A PROGRAM TO DISPLAY N NUMBERS
+num = int(input("enter number"))
+i = 0
+while(i<=num):                        #SIDE BY SIDE
+    print (i,end=" ")
+    i = i+1
+
+2)*WRITE A PROGRAM TO CALCULATE SUM OF N NUMBERS
+n=int(input("enter num"))
+sum=0
+i = 0
+while(i<=n):
+    sum = sum+i
+    i = i+1
+    print (sum)
+
+3)*WRITE A PROGRAM TO ADD ALL THE DIGITS IN A NUMBER
+n=int(input("enter number: "))
+sum=0
+while(n!=0):
+    r=n%10
+    sum=sum+r
+    n=n//10
+print(sum)
+
+4)*WRITE A PROGRAM TO DISPLAY N EVEN NUMBERS
+n=int(input("enter number: "))
+i=0
+while(i<=n):
+    if i%2==0:
+        print(i,end="\t ")
+    i=i+1
+
+5)*WRITE A PROGRAM TO DISPLAY SUM OF N EVEN NUMBERS
+n=int(input("enter number: "))
+i=0
+s =0
+while(i<=n):
+    if i%2==0:
+        s=s+i
+    i=i+1
+print(s)
+*ODD NUMBERS
+n=int(input("enter number: "))
+i=0
+s =0
+while(i<=n):
+    if i%2!=0:
+        s=s+i
+    i=i+1
+print(s)
+
+6)*WRITE A PROGRAM TO DISPLAY SUM OF EVEN AND ODD NUMBERS
+n=int(input("enter number: "))
+i=0
+o =0
+while(i<=n):
+    if i%2!=0:
+        o=o+i
+    i=i+1
+print("SUM OF ODD:",o)
+n=int(input("enter number: "))
+i=0
+e=0
+while(i<=n):
+    if i%2==0:
+        e=e+i
+    i=i+1
+print("SUM OF EVEN:",e)
+         or
+n=int(input("enter number: "))
+i=0
+o=e=0
+while(i<=n):
+    if i%2!=0:
+        o=o+i
+    else:
+        e=e+i
+    i=i+1
+print("SUM OF EVEN:",e)
+print("SUM OF ODD:",o)
+
+7)*WRITE A PROGRAM TO DISPLAY REVERSE OF GIVEN NUMBER
+n=int(input("enter number: "))
+temp=0
+while(n!=0):
+    temp=n%10
+    print(temp,end="")
+    n=n//10
+
+8)*DECIMAL TO BINARY
+dn=int(input("enter number: "))
+bn=0
+i=0
+while dn!=0:
+    r=dn%2
+    bn=bn+r*(10**i)
+    dn= dn//2
+    i+=1
+print(bn)
+
+9)*BINARY TO DECIMAL
+bn=int(input("enter number: "))
+dn=0
+i=1
+while bn!=0:
+    r=bn%10
+    dn=dn+(r*i)
+    bn=int(bn/10)
+    i=i*2
+print(dn)
+*       OR
+bn=int(input("enter number: "))
+dn=0
+i=0
+while bn!=0:
+    r=bn%10
+    dn=dn+r*(2**i)
+    bn=int(bn/10)
+    i+=1
+print(dn)
+
+
+
+
+FOR LOOP:-
+
+range function
+lambda function
+
+range(start,terminal,diff)
+range(11) prints upto 10
+range(7,11) prints 7to10
+ex:-
+*for i in range(11):
+    print(i)
+*for i in range(1,21,5):
+    print(i,end="")
+
+1)*WRITE A PROGRAM TO CALCULATE THE TOTAL OF N NATURAL NUMBERS AND FIND ITS AVERAGE
+n=int(input("enter a number: "))
+s=0
+for i in range(1,n+1):
+    s=s+i
+print("average is",s/n)
+print(i,end=" ")
+
+2)*MATHEMATICAL TABLES PROGRAM
+n=int(input("Enter from 1-50:"))
+print("multiplication table of",n)
+print("-----------------------------")
+for i in range (1,51):
+    print(n,"X",i,"=",n*i)
+
+3)*WRITE A PROGRAM FOR FACTORIAL OF A NUMBER
+n=int(input("Enter a Number:"))
+fact = 1
+for i in range(1,n+1):
+    fact=fact*i
+print("Factorial of ",n,"is",fact)
+
+4)*SERIES : FIND THE VALUE OF THE SERIES 1/1+1/2+1/3+1/4+.......+1/10
+n=int(input("Enter a Number:"))
+s=0
+for i in range(1,n+1):
+    a=1.0/i
+    s=s+a
+print(s)
+
+5)*SERIES:FIND THE VALUE OF SERIES 1/2+2/3+3/4+......n/n+1
+n=int(input("Enter a Number:"))
+s=0
+for i in range(1,n+1):
+    a=i/i+1
+    s=s+a
+print(s)
+
+6)*WRITE A PROGRAM : Given a maximum of four digit to the base 17 (10 – A, 11 – B, 12 – C, 13 – D … 16 – G} as input, output its decimal value.(tcs)
+ Case 1
+ Input – 1A
+ Expected Output – 27
+ Case 2
+ Input – 23GF
+ Expected Output – 10980
+
+num = str(input("ENTER INPUT"))
+print(int(num,17))
+
+7)*Given a maximum of 100 digit numbers as input, find the difference between the sum of odd and even position digits
+ Explanation : Odd positions are 4 and 6 as they are pos: 1 and pos: 3, both have sum 10. Similarly, 5 and 7 are at even positions pos: 2 and pos: 4 with sum 12. Thus, difference is 12 – 10 = 2
+
+ Case 2
+ Input: 5476
+ Expected Output: 2
+ Case 3
+ Input: 9834698765123
+ Expected Output: 1
+
+num = [int(d) for d in str(input("Enter the number:"))]
+even,odd = 0,0
+for i in range(0,len(num)):
+    if i % 2 ==0:
+        even = even + num[i]
+    else:
+        odd = odd + num[i]
+
+print(abs(odd-even))
+
+8)*BREAK STATEMENT
+abc=[1,2,3,4,5,6,7]
+for i in abc:
+    if i==5:
+        break
+    print(i,end=" ")
+
+9)*CONTINUE STATEMENT
+abc=[1,2,3,4,5,6,7]
+for i in abc:
+    if i==5:
+        continue
+    print(i,end=" ")
+
+10)*PASS STATEMENT
+for letter in 'keerthana':
+    pass
+    print("pass:",letter)
+
+11)*FIND THE NTH TERM OF SERIES 1,1,2,3,49,8,27,16,81,32,243,64,729,128,2187....
+this series is a mixture of 2 series- all the odd terms in the series from a geometric series and all the even terms form yet another geometric series.write a program to find the Nth term in the series
+the value of N is a +ve integer that should be read from STDIN.
+the Nth term that is calculated by the program should be written to STDOUT.
+other than value of n th term, noo other character/string or message should be written to STDOUT.
+
+num = int(input())
+if(num%2==0):
+num = num // 2
+print(3**(num-1))
+else:
+num = num // 2 + 1
+print(2**(num-1))
+
+12)*CALENDAR
+import calendar
+y= int(input("Enter the Year:"))
+m =1
+cal=calendar.TextCalendar(calendar.SUNDAY)
+i=1         
+while i<=12:
+    cal.prmonth(y,i)
+    i+=1
+
+
+
+
