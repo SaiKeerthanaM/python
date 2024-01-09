@@ -6,4 +6,3 @@ def print_even():
             print("even number",i)
             
 print_even()
-print("completed")
